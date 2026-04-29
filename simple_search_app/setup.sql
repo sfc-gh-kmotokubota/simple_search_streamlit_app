@@ -68,13 +68,13 @@ VALUES
 -- API連携
 CREATE OR REPLACE API INTEGRATION git_api_integration
   API_PROVIDER = git_https_api
-  API_ALLOWED_PREFIXES = ('https://github.com/kmotokubota/')
+  API_ALLOWED_PREFIXES = ('https://github.com/sfc-gh-kmotokubota/')
   ENABLED = TRUE;
 
 -- Git連携
 CREATE OR REPLACE GIT REPOSITORY GIT_INTEGRATION_FOR_HANDSON
   API_INTEGRATION = git_api_integration
-  ORIGIN = 'https://github.com/kmotokubota/simple_serach_streamlit_app.git';
+  ORIGIN = 'https://github.com/sfc-gh-kmotokubota/simple_serach_streamlit_app.git';
 
 -- Gitのソースコードを元にStreamlit in Snowflakeの作成
 CREATE OR REPLACE STREAMLIT simple_search_app
